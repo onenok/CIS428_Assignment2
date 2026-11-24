@@ -24,8 +24,18 @@
 # ----------------------------------------------------------------
 !deliverables/The Loomkeeper - Report.docx
 !deliverables/The Loomkeeper - Slides.pptx
+!deliverables/The Loomkeeper - Slides (zh-Hant).pdf
+!deliverables/REPORT.md
+!deliverables/slides.md
+!deliverables/slides.zh-Hant.md
 !deliverables/Loomkeeper - Gameplay (timelapse).mp4
 !deliverables/Loomkeeper - Gameplay (timelapse, compressed).mp4
+
+# Video sources and edits that are too large for GitHub's 100 MiB file limit,
+# and are redundant with the two files above.
+deliverables/2026-11-24 09-37-09.mp4
+deliverables/Loomkeeper - Gameplay (full 11min).mp4
+deliverables/Loomkeeper - Gameplay.mp4
 
 # ----------------------------------------------------------------
 # 2) The game (a The Sandbox Studio project)
