@@ -56,7 +56,7 @@ Studio is not available.
 |---|---|
 | `B` | Enter / leave build mode |
 | Right click / Left click | Place / break a block (8 m reach) |
-| `Z` / `Y` | Undo / redo (one gesture = one undo step) |
+| `Ctrl` + `Z` / `Y` | Undo / redo (one gesture = one undo step) |
 | `Ctrl + Enter` | Submit the design |
 | `F3` | Debug overlay (`F3+B` collider boxes, `F3+C` free camera) |
 
