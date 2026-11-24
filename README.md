@@ -2,6 +2,17 @@
 
 A first-person voxel building game made with **The Sandbox Studio / Genesys.js 20.0.1**.
 
+> ### 📦 Downloads
+> **[Releases → big_files](https://github.com/onenok/CIS428_Assignment2/releases/tag/big_files)**
+>
+> | Asset | Size |
+> |---|---|
+> | `Loomkeeper.-.Gameplay.full.11min.mp4` — full gameplay recording, 11:00, 1080p60, unedited | 186.5 MiB |
+> | `CIS428_Assignment2.zip` — report (.docx), slides (.pptx), zh-Hant slides (.pdf), 3:58 gameplay video | 108.5 MiB |
+>
+> The files GitHub cannot hold in a repository (over 100 MiB) live there; everything
+> else is in this repo.
+
 > **The pitch:** Minecraft generates terrain, but has never said *who decides*. This is the
 > what-if where that someone exists — and there is exactly one. The Loomkeeper is still
 > weaving this world block by block, and you arrive one chunk too early, before this piece
@@ -18,6 +29,7 @@ A first-person voxel building game made with **The Sandbox Studio / Genesys.js 2
 | [`deliverables/The Loomkeeper - Slides.pptx`](deliverables/) | Presentation deck (11 slides) |
 | `deliverables/Loomkeeper - Gameplay (timelapse).mp4` | Gameplay video, 3:58 — build phase at 16× speed |
 | `deliverables/Loomkeeper - Gameplay (timelapse, compressed).mp4` | Same edit, smaller file for quick download |
+| [Releases → `big_files`](https://github.com/onenok/CIS428_Assignment2/releases/tag/big_files) | **Full 11-minute recording** and the submission zip (too large for the repo) |
 | `TSB_Studio_Project/CIS428_Assignment2/` | **The game** — a The Sandbox Studio / Genesys.js project |
 | `TSB_Studio_Project/CIS428_Assignment2/src/` | TypeScript source |
 | `TSB_Studio_Project/CIS428_Assignment2/tests/` | Test suite (949 assertions / 219 suites / 54 files) |
