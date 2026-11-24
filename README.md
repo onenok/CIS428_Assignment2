@@ -21,6 +21,7 @@ A first-person voxel building game made with **The Sandbox Studio / Genesys.js 2
 | `TSB_Studio_Project/CIS428_Assignment2/` | **The game** — a The Sandbox Studio / Genesys.js project |
 | `TSB_Studio_Project/CIS428_Assignment2/src/` | TypeScript source |
 | `TSB_Studio_Project/CIS428_Assignment2/tests/` | Test suite (949 assertions / 219 suites / 54 files) |
+| `Obsidian/cis428 assignment2/` | Design notes and decision log — requirements, plan, per-issue write-ups, review records |
 
 Everything else in the working folder (build caches, editor state, raw art, scratch notes)
 is intentionally excluded by the whitelist in [`.gitignore`](.gitignore).

@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1260" width="1280" height="1260" font-family="Inter, system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d121b"/>
+      <stop offset="1" stop-color="#263750"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0f16"/>
+      <stop offset="1" stop-color="#11161f"/>
+    </linearGradient>
+    <filter id="panelShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="22" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="chipShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <clipPath id="screenClip"><rect x="0" y="0" width="1280" height="720"/></clipPath>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="1260" fill="url(#fade)"/>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 1 — full screen, the chosen design                    -->
+  <!-- ============================================================ -->
+  <g clip-path="url(#screenClip)">
+    <rect x="0" y="0" width="1280" height="720" fill="url(#sky)"/>
+
+    <rect x="0" y="500" width="1280" height="220" fill="#6f8c43"/>
+    <rect x="0" y="500" width="1280" height="46" fill="#92c551"/>
+    <g stroke="#7fae46" stroke-width="1.5" opacity="0.5">
+      <line x1="40" y1="500" x2="40" y2="546"/><line x1="120" y1="500" x2="120" y2="546"/>
+      <line x1="200" y1="500" x2="200" y2="546"/><line x1="280" y1="500" x2="280" y2="546"/>
+      <line x1="360" y1="500" x2="360" y2="546"/><line x1="440" y1="500" x2="440" y2="546"/>
+      <line x1="520" y1="500" x2="520" y2="546"/><line x1="600" y1="500" x2="600" y2="546"/>
+      <line x1="680" y1="500" x2="680" y2="546"/><line x1="760" y1="500" x2="760" y2="546"/>
+      <line x1="840" y1="500" x2="840" y2="546"/><line x1="920" y1="500" x2="920" y2="546"/>
+      <line x1="1000" y1="500" x2="1000" y2="546"/><line x1="1080" y1="500" x2="1080" y2="546"/>
+      <line x1="1160" y1="500" x2="1160" y2="546"/><line x1="1240" y1="500" x2="1240" y2="546"/>
+      <line x1="0" y1="546" x2="1280" y2="546"/>
+    </g>
+
+    <path d="M470 500 L470 640 L810 640 L810 500 Z" fill="#0a0d13"/>
+    <path d="M470 500 L470 640 L810 640 L810 500 Z" fill="none" stroke="#4d5c3a" stroke-width="2"/>
+    <rect x="470" y="620" width="340" height="20" fill="#5a5f68"/>
+    <text x="640" y="614" fill="#7a8290" font-size="11" text-anchor="middle" letter-spacing="1">BEDROCK</text>
+
+    <g filter="url(#panelShadow)">
+      <rect x="24" y="24" width="250" height="58" rx="8" fill="#0c0e14" fill-opacity="0.78"/>
+      <text x="40" y="47" fill="#e8eaed" font-size="13" font-weight="700" letter-spacing="0.4">OBJECTIVE</text>
+      <text x="40" y="69" fill="#b8c0cc" font-size="15">Place 5 blocks (5 / 5)</text>
+    </g>
+
+    <g filter="url(#panelShadow)">
+      <rect x="380" y="18" width="520" height="92" rx="12" fill="#0c0e14" fill-opacity="0.82" stroke="#ffffff" stroke-opacity="0.08"/>
+      <text x="398" y="42" fill="#e8eaed" font-size="13" font-weight="700">Presets</text>
+      <g font-size="13" font-weight="600">
+        <rect x="398" y="54" width="70" height="30" rx="12" fill="#4a9eff"/>
+        <text x="433" y="73" fill="#ffffff" text-anchor="middle">All</text>
+        <rect x="476" y="54" width="96" height="30" rx="12" fill="#2a2d44"/>
+        <text x="524" y="73" fill="#c3c9d4" text-anchor="middle">Structures</text>
+        <rect x="580" y="54" width="92" height="30" rx="12" fill="#2a2d44"/>
+        <text x="626" y="73" fill="#c3c9d4" text-anchor="middle">Furniture</text>
+        <rect x="680" y="54" width="70" height="30" rx="12" fill="#2a2d44"/>
+        <text x="715" y="73" fill="#c3c9d4" text-anchor="middle">Nature</text>
+        <rect x="758" y="54" width="60" height="30" rx="12" fill="#2a2d44"/>
+        <text x="788" y="73" fill="#c3c9d4" text-anchor="middle">Misc</text>
+      </g>
+    </g>
+
+    <g stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9">
+      <line x1="640" y1="266" x2="640" y2="278"/>
+      <line x1="640" y1="282" x2="640" y2="294"/>
+      <line x1="626" y1="280" x2="638" y2="280"/>
+      <line x1="642" y1="280" x2="654" y2="280"/>
+    </g>
+
+    <g filter="url(#panelShadow)">
+      <rect x="364" y="636" width="56" height="56" rx="8" fill="#0c0e14" fill-opacity="0.78" stroke="#4a9eff" stroke-width="2"/>
+      <rect x="426" y="636" width="56" height="56" rx="8" fill="#0c0e14" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.12"/>
+      <rect x="488" y="636" width="56" height="56" rx="8" fill="#0c0e14" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.12"/>
+      <rect x="550" y="636" width="56" height="56" rx="8" fill="#0c0e14" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.12"/>
+      <rect x="612" y="636" width="56" height="56" rx="8" fill="#0c0e14" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.12"/>
+      <rect x="674" y="636" width="56" height="56" rx="8" fill="#0c0e14" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.12"/>
+      <rect x="736" y="636" width="56" height="56" rx="8" fill="#0c0e14" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.12"/>
+      <rect x="798" y="636" width="56" height="56" rx="8" fill="#0c0e14" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.12"/>
+      <rect x="860" y="636" width="56" height="56" rx="8" fill="#0c0e14" fill-opacity="0.78" stroke="#ffffff" stroke-opacity="0.12"/>
+      <rect x="378" y="650" width="28" height="28" rx="3" fill="#92c551"/>
+      <rect x="440" y="650" width="28" height="28" rx="3" fill="#8a6440"/>
+      <rect x="502" y="650" width="28" height="28" rx="3" fill="#8b8d93"/>
+      <rect x="564" y="650" width="28" height="28" rx="3" fill="#6d6f75"/>
+      <rect x="626" y="650" width="28" height="28" rx="3" fill="#c19a5b"/>
+      <rect x="688" y="650" width="28" height="28" rx="3" fill="#6a563a"/>
+      <rect x="750" y="650" width="28" height="28" rx="3" fill="#dcd09a"/>
+      <rect x="812" y="650" width="28" height="28" rx="3" fill="#b8d8e8"/>
+      <rect x="874" y="650" width="28" height="28" rx="3" fill="#a2573f"/>
+    </g>
+
+    <g>
+      <rect x="1030" y="654" width="226" height="36" rx="8" fill="#0c0e14" fill-opacity="0.7"/>
+      <text x="1143" y="678" fill="#c3c9d4" font-size="14" text-anchor="middle">Ctrl + Enter to submit</text>
+    </g>
+
+    <rect x="0" y="0" width="1280" height="720" fill="#05070c" fill-opacity="0.55"/>
+
+    <g filter="url(#panelShadow)">
+      <rect x="400" y="270" width="480" height="176" rx="12" fill="#141821" fill-opacity="0.97" stroke="#ffffff" stroke-opacity="0.10"/>
+      <text x="640" y="322" fill="#e8eaed" font-size="22" font-weight="600" text-anchor="middle">Submit this design?</text>
+      <line x1="432" y1="346" x2="848" y2="346" stroke="#ffffff" stroke-opacity="0.09"/>
+      <g>
+        <g filter="url(#chipShadow)">
+          <rect x="497" y="366" width="68" height="30" rx="6" fill="#2d3250" stroke="#ffffff" stroke-opacity="0.15"/>
+          <text x="531" y="386" fill="#e8eaed" font-size="11" font-weight="600" font-family="'JetBrains Mono', Consolas, monospace" letter-spacing="0.5" text-anchor="middle">ENTER</text>
+        </g>
+        <text x="575" y="386" fill="#e8eaed" font-size="15">Submit</text>
+        <g filter="url(#chipShadow)">
+          <rect x="675" y="366" width="48" height="30" rx="6" fill="#2d3250" stroke="#ffffff" stroke-opacity="0.15"/>
+          <text x="699" y="386" fill="#e8eaed" font-size="11" font-weight="600" font-family="'JetBrains Mono', Consolas, monospace" letter-spacing="0.5" text-anchor="middle">ESC</text>
+        </g>
+        <text x="733" y="386" fill="#a8b0bd" font-size="15">Cancel</text>
+      </g>
+      <text x="640" y="428" fill="#6f7885" font-size="12" text-anchor="middle">Your blocks stay as they are if you cancel</text>
+    </g>
+  </g>
+
+  <rect x="0" y="0" width="1280" height="720" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+  <text x="24" y="746" fill="#8b93a1" font-size="14" font-weight="600">1 — 全螢幕情境 ｜ 置中面板 · 背景變暗 55% · 無副行 · Enter 永遠可用</text>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 2 — no minimum: two extremes look identical           -->
+  <!-- ============================================================ -->
+  <text x="24" y="796" fill="#8b93a1" font-size="14" font-weight="600">2 — 任何設計都有效：0 塊與 12 塊的確認框完全相同（不再有「未達標」狀態）</text>
+
+  <g filter="url(#panelShadow)">
+    <rect x="60" y="820" width="480" height="176" rx="12" fill="#141821" stroke="#ffffff" stroke-opacity="0.10"/>
+    <text x="300" y="872" fill="#e8eaed" font-size="22" font-weight="600" text-anchor="middle">Submit this design?</text>
+    <line x1="92" y1="896" x2="508" y2="896" stroke="#ffffff" stroke-opacity="0.09"/>
+    <g filter="url(#chipShadow)">
+      <rect x="157" y="916" width="68" height="30" rx="6" fill="#2d3250" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="191" y="936" fill="#e8eaed" font-size="11" font-weight="600" font-family="'JetBrains Mono', Consolas, monospace" letter-spacing="0.5" text-anchor="middle">ENTER</text>
+    </g>
+    <text x="235" y="936" fill="#e8eaed" font-size="15">Submit</text>
+    <g filter="url(#chipShadow)">
+      <rect x="335" y="916" width="48" height="30" rx="6" fill="#2d3250" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="359" y="936" fill="#e8eaed" font-size="11" font-weight="600" font-family="'JetBrains Mono', Consolas, monospace" letter-spacing="0.5" text-anchor="middle">ESC</text>
+    </g>
+    <text x="393" y="936" fill="#a8b0bd" font-size="15">Cancel</text>
+    <text x="300" y="978" fill="#6f7885" font-size="12" text-anchor="middle">Your blocks stay as they are if you cancel</text>
+    <text x="300" y="1030" fill="#5f6774" font-size="12" text-anchor="middle">0 塊</text>
+  </g>
+
+  <g filter="url(#panelShadow)">
+    <rect x="740" y="820" width="480" height="176" rx="12" fill="#141821" stroke="#ffffff" stroke-opacity="0.10"/>
+    <text x="980" y="872" fill="#e8eaed" font-size="22" font-weight="600" text-anchor="middle">Submit this design?</text>
+    <line x1="772" y1="896" x2="1188" y2="896" stroke="#ffffff" stroke-opacity="0.09"/>
+    <g filter="url(#chipShadow)">
+      <rect x="837" y="916" width="68" height="30" rx="6" fill="#2d3250" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="871" y="936" fill="#e8eaed" font-size="11" font-weight="600" font-family="'JetBrains Mono', Consolas, monospace" letter-spacing="0.5" text-anchor="middle">ENTER</text>
+    </g>
+    <text x="915" y="936" fill="#e8eaed" font-size="15">Submit</text>
+    <g filter="url(#chipShadow)">
+      <rect x="1015" y="916" width="48" height="30" rx="6" fill="#2d3250" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="1039" y="936" fill="#e8eaed" font-size="11" font-weight="600" font-family="'JetBrains Mono', Consolas, monospace" letter-spacing="0.5" text-anchor="middle">ESC</text>
+    </g>
+    <text x="1073" y="936" fill="#a8b0bd" font-size="15">Cancel</text>
+    <text x="980" y="978" fill="#6f7885" font-size="12" text-anchor="middle">Your blocks stay as they are if you cancel</text>
+    <text x="980" y="1030" fill="#5f6774" font-size="12" text-anchor="middle">12 塊</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 3 — the flow                                         -->
+  <!-- ============================================================ -->
+  <text x="24" y="1082" fill="#8b93a1" font-size="14" font-weight="600">3 — 流程：Ctrl+Enter 開啟　→　Enter 送出／Esc 取消（取消後 phase、方塊、計數完全不變）</text>
+
+  <g>
+    <g filter="url(#panelShadow)">
+      <rect x="60" y="1104" width="320" height="64" rx="10" fill="#141821" stroke="#ffffff" stroke-opacity="0.10"/>
+      <text x="220" y="1130" fill="#c3c9d4" font-size="14" text-anchor="middle">Ctrl + Enter</text>
+      <text x="220" y="1152" fill="#6f7885" font-size="12" text-anchor="middle">在建造模式任意時刻</text>
+    </g>
+    <path d="M392 1136 L428 1136" stroke="#4a9eff" stroke-width="2"/>
+    <path d="M436 1136 L426 1130 L426 1142 Z" fill="#4a9eff"/>
+
+    <g filter="url(#panelShadow)">
+      <rect x="448" y="1104" width="384" height="64" rx="10" fill="#141821" stroke="#4a9eff" stroke-opacity="0.45"/>
+      <text x="640" y="1130" fill="#e8eaed" font-size="14" text-anchor="middle">確認框開啟（input 鎖成 menu）</text>
+      <text x="640" y="1152" fill="#6f7885" font-size="12" text-anchor="middle">Enter / Esc 必須繞過 D5 的移動鎖</text>
+    </g>
+
+    <path d="M844 1136 L880 1136" stroke="#3a4055" stroke-width="2"/>
+    <path d="M888 1136 L878 1126 L878 1146 Z" fill="#3a4055"/>
+
+    <g filter="url(#panelShadow)">
+      <rect x="900" y="1084" width="320" height="46" rx="10" fill="#141821" stroke="#4a9eff" stroke-opacity="0.45"/>
+      <text x="1060" y="1113" fill="#e8eaed" font-size="14" text-anchor="middle">Enter → ending</text>
+    </g>
+    <g filter="url(#panelShadow)">
+      <rect x="900" y="1142" width="320" height="46" rx="10" fill="#141821" stroke="#ffffff" stroke-opacity="0.10"/>
+      <text x="1060" y="1171" fill="#a8b0bd" font-size="14" text-anchor="middle">Esc → 回到 building（狀態不變）</text>
+    </g>
+  </g>
+
+  <text x="24" y="1240" fill="#5f6774" font-size="12">已否決：變體 B 底部橫幅　·　面板 rgba(20,24,33,.97)　·　按鍵 chip #2d3250　·　強調 #4a9eff　·　參考畫面 1280 × 720</text>
+</svg>

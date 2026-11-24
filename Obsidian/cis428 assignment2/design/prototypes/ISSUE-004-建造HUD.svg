@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1680" preserveAspectRatio="xMidYMin meet" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2436"/>
+      <stop offset="1" stop-color="#0d1219"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4d7a35"/>
+      <stop offset="1" stop-color="#2f4d21"/>
+    </linearGradient>
+
+    <!-- isometric block icons, 32x32, colours derived from PLACEHOLDER_SPECS -->
+    <g id="cube-grass"><polygon points="16,0 32,8 16,16 0,8" fill="#5f9f35"/><polygon points="0,8 16,16 16,32 0,24" fill="#866043"/><polygon points="32,8 16,16 16,32 32,24" fill="#684a34"/></g>
+    <g id="cube-dirt"><polygon points="16,0 32,8 16,16 0,8" fill="#9a6e4d"/><polygon points="0,8 16,16 16,32 0,24" fill="#866043"/><polygon points="32,8 16,16 16,32 32,24" fill="#684a34"/></g>
+    <g id="cube-stone"><polygon points="16,0 32,8 16,16 0,8" fill="#909090"/><polygon points="0,8 16,16 16,32 0,24" fill="#7d7d7d"/><polygon points="32,8 16,16 16,32 32,24" fill="#5e5e5e"/></g>
+    <g id="cube-cobble"><polygon points="16,0 32,8 16,16 0,8" fill="#7f7f7f"/><polygon points="0,8 16,16 16,32 0,24" fill="#6e6e6e"/><polygon points="32,8 16,16 16,32 32,24" fill="#545454"/></g>
+    <g id="cube-planks"><polygon points="16,0 32,8 16,16 0,8" fill="#ba9a5a"/><polygon points="0,8 16,16 16,32 0,24" fill="#a2824e"/><polygon points="32,8 16,16 16,32 32,24" fill="#7d653c"/></g>
+    <g id="cube-log"><polygon points="16,0 32,8 16,16 0,8" fill="#9a7d4d"/><polygon points="0,8 16,16 16,32 0,24" fill="#665132"/><polygon points="32,8 16,16 16,32 32,24" fill="#4f3f27"/></g>
+    <g id="cube-sand"><polygon points="16,0 32,8 16,16 0,8" fill="#fceebb"/><polygon points="0,8 16,16 16,32 0,24" fill="#dbcfa3"/><polygon points="32,8 16,16 16,32 32,24" fill="#b0a684"/></g>
+    <g id="cube-glass"><polygon points="16,0 32,8 16,16 0,8" fill="#e6ffff" opacity="0.62"/><polygon points="0,8 16,16 16,32 0,24" fill="#c8e6f0" opacity="0.5"/><polygon points="32,8 16,16 16,32 32,24" fill="#9dc0cc" opacity="0.5"/></g>
+    <g id="cube-bricks"><polygon points="16,0 32,8 16,16 0,8" fill="#964a3c"/><polygon points="0,8 16,16 16,32 0,24" fill="#964a3c"/><polygon points="32,8 16,16 16,32 32,24" fill="#733a30"/></g>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="1680" fill="#080a0e"/>
+  <text x="72" y="64" fill="#e8eaed" font-size="30" font-weight="600">ISSUE-004 建造 HUD — 修正草圖（方案 B）</text>
+  <text x="72" y="98" fill="#6f7885" font-size="15">preset tabs 接上分類 → 更新下方設計按鈕（蓋下去留待之後）；hotbar 改為「圖示 + 名稱」，名稱置中不溢出</text>
+
+  <!-- ============ A. 全螢幕 BUild HUD ============ -->
+  <text x="72" y="152" fill="#4a9eff" font-size="16" font-weight="600" letter-spacing="0.08em">A · 建造模式全螢幕</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="172" width="1296" height="700" rx="14" fill="url(#sky)"/>
+    <rect x="72" y="560" width="1296" height="312" rx="0" fill="url(#ground)"/>
+    <path d="M72 560 L1368 560" stroke="#6f9c4a" stroke-width="2"/>
+
+    <!-- world: a small stack of blocks + pit hint -->
+    <use href="#cube-grass" x="560" y="486" transform="translate(560,486) scale(3) translate(-560,-486)"/>
+    <g transform="translate(700,472) scale(3)">
+      <use href="#cube-planks" x="0" y="0"/>
+    </g>
+    <g transform="translate(700,424) scale(3)">
+      <use href="#cube-planks" x="0" y="0"/>
+    </g>
+    <g transform="translate(876,472) scale(3)">
+      <use href="#cube-bricks" x="0" y="0"/>
+    </g>
+
+    <!-- crosshair -->
+    <g stroke="#ffffff" stroke-width="2" opacity="0.95">
+      <line x1="713" y1="514" x2="713" y2="524"/>
+      <line x1="713" y1="536" x2="713" y2="546"/>
+      <line x1="703" y1="530" x2="713" y2="530"/>
+      <line x1="723" y1="530" x2="733" y2="530"/>
+    </g>
+    <circle cx="762" cy="560" r="26" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.65"/>
+    <text x="762" y="606" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.7">十字準心維持不變</text>
+
+    <!-- preset panel (top-center) -->
+    <g>
+      <rect x="520" y="196" width="400" height="176" rx="12" fill="rgba(12,14,20,0.86)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="540" y="222" fill="#b8c0cc" font-size="12" font-weight="600" letter-spacing="0.10em">PRESETS</text>
+
+      <!-- tab row -->
+      <g>
+        <rect x="540" y="236" width="58" height="28" rx="7" fill="#4a9eff"/>
+        <text x="569" y="255" text-anchor="middle" fill="#08131f" font-size="12" font-weight="700">All</text>
+
+        <rect x="606" y="236" width="92" height="28" rx="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+        <text x="652" y="255" text-anchor="middle" fill="#e8eaed" font-size="12">Structures</text>
+
+        <rect x="706" y="236" width="90" height="28" rx="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+        <text x="751" y="255" text-anchor="middle" fill="#e8eaed" font-size="12">Furniture</text>
+
+        <rect x="804" y="236" width="74" height="28" rx="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+        <text x="841" y="255" text-anchor="middle" fill="#e8eaed" font-size="12">Nature</text>
+      </g>
+
+      <!-- design row: 6 designs for "All" -->
+      <g font-size="11">
+        <rect x="540" y="280" width="62" height="58" rx="8" fill="rgba(74,158,255,0.16)" stroke="#4a9eff" stroke-width="1.6"/>
+        <text x="571" y="308" text-anchor="middle" fill="#e8eaed" font-size="12">Hut</text>
+        <text x="571" y="326" text-anchor="middle" fill="#8fb8e0" font-size="10">13 blk</text>
+
+        <rect x="608" y="280" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+        <text x="639" y="308" text-anchor="middle" fill="#e8eaed" font-size="12">Tower</text>
+        <text x="639" y="326" text-anchor="middle" fill="#6f7885" font-size="10">25 blk</text>
+
+        <rect x="676" y="280" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+        <text x="707" y="308" text-anchor="middle" fill="#e8eaed" font-size="12">Table</text>
+        <text x="707" y="326" text-anchor="middle" fill="#6f7885" font-size="10">17 blk</text>
+
+        <rect x="744" y="280" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+        <text x="775" y="308" text-anchor="middle" fill="#e8eaed" font-size="12">Chair</text>
+        <text x="775" y="326" text-anchor="middle" fill="#6f7885" font-size="10">6 blk</text>
+
+        <rect x="812" y="280" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+        <text x="843" y="308" text-anchor="middle" fill="#e8eaed" font-size="12">Tree</text>
+        <text x="843" y="326" text-anchor="middle" fill="#6f7885" font-size="10">19 blk</text>
+      </g>
+      <!-- clipped 6th -->
+      <g>
+        <rect x="880" y="280" width="20" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+      </g>
+    </g>
+
+    <!-- submit prompt (bottom-right) -->
+    <g>
+      <rect x="1150" y="686" width="200" height="40" rx="9" fill="rgba(12,14,20,0.82)" stroke="rgba(255,255,255,0.10)"/>
+      <rect x="1160" y="695" width="64" height="22" rx="6" fill="#2d3250" stroke="rgba(255,255,255,0.15)"/>
+      <text x="1192" y="711" text-anchor="middle" fill="#e8eaed" font-size="10" font-family="ui-monospace, monospace">Ctrl+Enter</text>
+      <text x="1234" y="711" fill="#a8b0bd" font-size="12">to submit</text>
+    </g>
+
+    <!-- hotbar (bottom-center) -->
+    <g>
+      <rect x="544" y="740" width="352" height="84" rx="12" fill="rgba(12,14,20,0.82)" stroke="rgba(255,255,255,0.10)"/>
+      <!-- 5 slots visible (of 9), slot 1 selected -->
+      <g>
+        <rect x="556" y="752" width="60" height="60" rx="8" fill="rgba(74,158,255,0.18)" stroke="#4a9eff" stroke-width="2"/>
+        <g transform="translate(570,760)"><use href="#cube-grass"/></g>
+        <text x="586" y="804" text-anchor="middle" fill="#e8eaed" font-size="9">Grass</text>
+
+        <rect x="622" y="752" width="60" height="60" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+        <g transform="translate(636,760)"><use href="#cube-dirt"/></g>
+        <text x="652" y="804" text-anchor="middle" fill="#c7ccd4" font-size="9">Dirt</text>
+
+        <rect x="688" y="752" width="60" height="60" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+        <g transform="translate(702,760)"><use href="#cube-stone"/></g>
+        <text x="718" y="804" text-anchor="middle" fill="#c7ccd4" font-size="9">Stone</text>
+
+        <rect x="754" y="752" width="60" height="60" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+        <g transform="translate(768,760)"><use href="#cube-cobble"/></g>
+        <text x="784" y="804" text-anchor="middle" fill="#c7ccd4" font-size="8.5">Cobble…</text>
+
+        <rect x="820" y="752" width="60" height="60" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+        <g transform="translate(834,760)"><use href="#cube-planks"/></g>
+        <text x="850" y="804" text-anchor="middle" fill="#c7ccd4" font-size="9">Planks</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- annotations for A -->
+  <g font-size="12" fill="#8f97a3">
+    <text x="72" y="906">① preset 面板置於 top-center；tabs 一列 4 顆（All + 3 分類），選中的是 primary 樣式</text>
+    <text x="72" y="928">② 下方設計按鈕列依分類變化（圖中為 All＝6 個設計，寬度不足時橫向裁切，之後可加左右箭頭）</text>
+    <text x="72" y="950">③ hotbar 每個槽位：3× 等角方塊圖示（32×32）＋ 名稱 9px 單行省略號，兩者都水平置中</text>
+  </g>
+
+  <!-- ============ B. 兩態對照 ============ -->
+  <text x="72" y="1020" fill="#4a9eff" font-size="16" font-weight="600" letter-spacing="0.08em">B · tabs 切換後的實際變化</text>
+
+  <!-- state 1: All -->
+  <g>
+    <text x="72" y="1058" fill="#b8c0cc" font-size="13">狀態 1：All（預設）</text>
+    <rect x="72" y="1072" width="612" height="190" rx="12" fill="rgba(12,14,20,0.86)" stroke="rgba(255,255,255,0.10)"/>
+    <text x="90" y="1098" fill="#b8c0cc" font-size="12" font-weight="600" letter-spacing="0.10em">PRESETS</text>
+    <rect x="90" y="1112" width="58" height="28" rx="7" fill="#4a9eff"/>
+    <text x="119" y="1131" text-anchor="middle" fill="#08131f" font-size="12" font-weight="700">All</text>
+    <rect x="156" y="1112" width="92" height="28" rx="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <text x="202" y="1131" text-anchor="middle" fill="#e8eaed" font-size="12">Structures</text>
+    <rect x="256" y="1112" width="90" height="28" rx="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <text x="301" y="1131" text-anchor="middle" fill="#e8eaed" font-size="12">Furniture</text>
+    <rect x="354" y="1112" width="74" height="28" rx="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <text x="391" y="1131" text-anchor="middle" fill="#e8eaed" font-size="12">Nature</text>
+    <g font-size="11">
+      <rect x="90" y="1156" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+      <text x="121" y="1184" text-anchor="middle" fill="#e8eaed" font-size="12">Hut</text><text x="121" y="1202" text-anchor="middle" fill="#6f7885" font-size="10">13 blk</text>
+      <rect x="158" y="1156" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+      <text x="189" y="1184" text-anchor="middle" fill="#e8eaed" font-size="12">Tower</text><text x="189" y="1202" text-anchor="middle" fill="#6f7885" font-size="10">25 blk</text>
+      <rect x="226" y="1156" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+      <text x="257" y="1184" text-anchor="middle" fill="#e8eaed" font-size="12">Table</text><text x="257" y="1202" text-anchor="middle" fill="#6f7885" font-size="10">17 blk</text>
+      <rect x="294" y="1156" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+      <text x="325" y="1184" text-anchor="middle" fill="#e8eaed" font-size="12">Chair</text><text x="325" y="1202" text-anchor="middle" fill="#6f7885" font-size="10">6 blk</text>
+      <rect x="362" y="1156" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+      <text x="393" y="1184" text-anchor="middle" fill="#e8eaed" font-size="12">Tree</text><text x="393" y="1202" text-anchor="middle" fill="#6f7885" font-size="10">19 blk</text>
+      <rect x="430" y="1156" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+      <text x="461" y="1184" text-anchor="middle" fill="#e8eaed" font-size="12">Rock</text><text x="461" y="1202" text-anchor="middle" fill="#6f7885" font-size="10">28 blk</text>
+    </g>
+  </g>
+
+  <!-- state 2: Furniture -->
+  <g>
+    <text x="716" y="1058" fill="#b8c0cc" font-size="13">狀態 2：點 Furniture 之後</text>
+    <rect x="716" y="1072" width="612" height="190" rx="12" fill="rgba(12,14,20,0.86)" stroke="rgba(255,255,255,0.10)"/>
+    <text x="734" y="1098" fill="#b8c0cc" font-size="12" font-weight="600" letter-spacing="0.10em">PRESETS</text>
+    <rect x="734" y="1112" width="58" height="28" rx="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <text x="763" y="1131" text-anchor="middle" fill="#e8eaed" font-size="12">All</text>
+    <rect x="800" y="1112" width="92" height="28" rx="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <text x="846" y="1131" text-anchor="middle" fill="#e8eaed" font-size="12">Structures</text>
+    <rect x="900" y="1112" width="90" height="28" rx="7" fill="#4a9eff"/>
+    <text x="945" y="1131" text-anchor="middle" fill="#08131f" font-size="12" font-weight="700">Furniture</text>
+    <rect x="998" y="1112" width="74" height="28" rx="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <text x="1035" y="1131" text-anchor="middle" fill="#e8eaed" font-size="12">Nature</text>
+
+    <rect x="734" y="1156" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="765" y="1184" text-anchor="middle" fill="#e8eaed" font-size="12">Table</text><text x="765" y="1202" text-anchor="middle" fill="#6f7885" font-size="10">17 blk</text>
+    <rect x="802" y="1156" width="62" height="58" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="833" y="1184" text-anchor="middle" fill="#e8eaed" font-size="12">Chair</text><text x="833" y="1202" text-anchor="middle" fill="#6f7885" font-size="10">6 blk</text>
+
+    <text x="886" y="1180" fill="#6f7885" font-size="11">← 只剩 2 個設計</text>
+    <text x="886" y="1198" fill="#6f7885" font-size="11">（Hut / Tower / Tree / Rock 隱藏）</text>
+  </g>
+
+  <g font-size="12" fill="#8f97a3">
+    <text x="72" y="1290">tabs 現在真的會改變面板內容 —— 這是 ISSUE-004 第 3 點的「按了沒反應」的直接修正</text>
+    <text x="72" y="1312">點設計按鈕會 highlight（primary 邊框）並顯示 toast：設計名稱 + 格數 + 「放置待實作」</text>
+  </g>
+
+  <!-- ============ C. hotbar slot 放大 ============ -->
+  <text x="72" y="1380" fill="#4a9eff" font-size="16" font-weight="600" letter-spacing="0.08em">C · hotbar 槽位：修正前 / 修正後（2× 放大）</text>
+
+  <!-- before -->
+  <g>
+    <text x="72" y="1418" fill="#f5b942" font-size="13">修正前：文字直接塞進 56px 槽位 → 溢出、未置中</text>
+    <g transform="translate(72,1432)">
+      <rect x="0" y="0" width="112" height="112" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+      <text x="8" y="66" fill="#e8eaed" font-size="18" font-family="ui-monospace, monospace">Cobblestone</text>
+      <rect x="0" y="0" width="112" height="112" rx="16" fill="none" stroke="#ff3b30" stroke-width="2" stroke-dasharray="6 5"/>
+    </g>
+    <text x="200" y="1470" fill="#6f7885" font-size="11">字串超出容器</text>
+    <text x="200" y="1490" fill="#6f7885" font-size="11">基線靠左，不是中心</text>
+  </g>
+
+  <!-- after -->
+  <g>
+    <text x="520" y="1418" fill="#4a9eff" font-size="13">修正後：等角方塊圖示 ＋ 9px 單行省略號名稱</text>
+    <g transform="translate(520,1432)">
+      <rect x="0" y="0" width="112" height="112" rx="16" fill="rgba(74,158,255,0.18)" stroke="#4a9eff" stroke-width="2"/>
+      <g transform="translate(24,14) scale(2)"><use href="#cube-cobble"/></g>
+      <text x="56" y="102" text-anchor="middle" fill="#e8eaed" font-size="9">Cobble…</text>
+    </g>
+    <g transform="translate(672,1432)">
+      <rect x="0" y="0" width="112" height="112" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+      <g transform="translate(24,14) scale(2)"><use href="#cube-planks"/></g>
+      <text x="56" y="102" text-anchor="middle" fill="#e8eaed" font-size="9">Oak Planks</text>
+    </g>
+    <g transform="translate(824,1432)">
+      <rect x="0" y="0" width="112" height="112" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+      <g transform="translate(24,14) scale(2)"><use href="#cube-glass"/></g>
+      <text x="56" y="102" text-anchor="middle" fill="#e8eaed" font-size="9">Glass</text>
+    </g>
+    <text x="968" y="1470" fill="#6f7885" font-size="11">圖示固定 32×32、垂直起點 760；</text>
+    <text x="968" y="1490" fill="#6f7885" font-size="11">名稱 y=804 置中，overflow 用省略號</text>
+    <text x="968" y="1510" fill="#6f7885" font-size="11">槽位與圖示比例 56 : 32（上下各留 8/14）</text>
+  </g>
+
+  <!-- ============ D. 資料來源 ============ -->
+  <text x="72" y="1580" fill="#4a9eff" font-size="16" font-weight="600" letter-spacing="0.08em">D · 圖示顏色來源</text>
+  <text x="72" y="1606" fill="#8f97a3" font-size="12">全部取自 src/voxel/placeholderTexture.ts 的 PLACEHOLDER_SPECS（top 面 ×1.15、左面 ×0.8、右面 ×0.62）</text>
+  <text x="72" y="1628" fill="#8f97a3" font-size="12">不新增美術資源、不改材質；真貼圖之後若替換，圖示只需換同一個函式的輸出</text>
+</svg>

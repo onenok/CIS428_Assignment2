@@ -1,0 +1,540 @@
+{
+  "nodes": [
+    {
+      "id": "g5",
+      "type": "group",
+      "x": 840,
+      "y": -500,
+      "width": 1740,
+      "height": 800,
+      "color": "3",
+      "label": "計劃層（實作方式）"
+    },
+    {
+      "id": "g3",
+      "type": "group",
+      "x": -700,
+      "y": -100,
+      "width": 1400,
+      "height": 260,
+      "color": "4",
+      "label": "③ 建造循環"
+    },
+    {
+      "id": "g1",
+      "type": "group",
+      "x": -700,
+      "y": -700,
+      "width": 1700,
+      "height": 260,
+      "color": "6",
+      "label": "① 開場過場"
+    },
+    {
+      "id": "g4",
+      "type": "group",
+      "x": -700,
+      "y": 200,
+      "width": 1300,
+      "height": 260,
+      "color": "1",
+      "label": "④ 結束"
+    },
+    {
+      "id": "g2",
+      "type": "group",
+      "x": -700,
+      "y": -400,
+      "width": 880,
+      "height": 260,
+      "color": "5",
+      "label": "② 自由探索"
+    },
+    {
+      "id": "n2",
+      "type": "file",
+      "file": "nodes/N2 環境描述對話.md",
+      "x": 160,
+      "y": -640,
+      "width": 380,
+      "height": 160
+    },
+    {
+      "id": "n3",
+      "type": "file",
+      "file": "nodes/N3 織界者現身.md",
+      "x": 580,
+      "y": -640,
+      "width": 380,
+      "height": 160
+    },
+    {
+      "id": "n4",
+      "type": "file",
+      "file": "nodes/N4 玩家可自由行動.md",
+      "x": -660,
+      "y": -340,
+      "width": 380,
+      "height": 160
+    },
+    {
+      "id": "n5",
+      "type": "file",
+      "file": "nodes/N5 建造模式入口.md",
+      "x": -240,
+      "y": -340,
+      "width": 380,
+      "height": 160
+    },
+    {
+      "id": "n6",
+      "type": "file",
+      "file": "nodes/N6 選類別.md",
+      "x": -660,
+      "y": -40,
+      "width": 300,
+      "height": 160
+    },
+    {
+      "id": "n7",
+      "type": "file",
+      "file": "nodes/N7 選設計.md",
+      "x": -320,
+      "y": -40,
+      "width": 300,
+      "height": 160
+    },
+    {
+      "id": "n8",
+      "type": "file",
+      "file": "nodes/N8 確認放置.md",
+      "x": 20,
+      "y": -40,
+      "width": 300,
+      "height": 160
+    },
+    {
+      "id": "n9",
+      "type": "file",
+      "file": "nodes/N9 Submit 區塊.md",
+      "x": 360,
+      "y": -40,
+      "width": 300,
+      "height": 160
+    },
+    {
+      "id": "n10",
+      "type": "file",
+      "file": "nodes/N10 織界者對話.md",
+      "x": -660,
+      "y": 260,
+      "width": 380,
+      "height": 160
+    },
+    {
+      "id": "n11",
+      "type": "file",
+      "file": "nodes/N11 結束動畫.md",
+      "x": -240,
+      "y": 260,
+      "width": 380,
+      "height": 160
+    },
+    {
+      "id": "n12",
+      "type": "file",
+      "file": "nodes/N12 遊戲結束.md",
+      "x": 180,
+      "y": 260,
+      "width": 380,
+      "height": 160
+    },
+    {
+      "id": "n1",
+      "type": "file",
+      "file": "nodes/N1 眼睛睜開濾鏡.md",
+      "x": -260,
+      "y": -640,
+      "width": 380,
+      "height": 160
+    },
+    {
+      "id": "p1",
+      "type": "file",
+      "file": "plan/P1 過場系統.md",
+      "x": 880,
+      "y": -440,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "p6",
+      "type": "file",
+      "file": "plan/P6 世界生成.md",
+      "x": 880,
+      "y": -80,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "p2",
+      "type": "file",
+      "file": "plan/P2 建造系統.md",
+      "x": 1220,
+      "y": -440,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "p7",
+      "type": "file",
+      "file": "plan/P7 UI 系統.md",
+      "x": 1220,
+      "y": -80,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "p10",
+      "type": "file",
+      "file": "plan/P10 交付物.md",
+      "x": 2240,
+      "y": -80,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "p3",
+      "type": "file",
+      "file": "plan/P3 結束系統.md",
+      "x": 1560,
+      "y": -440,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "p8",
+      "type": "file",
+      "file": "plan/P8 音效系統.md",
+      "x": 1560,
+      "y": -80,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "p4",
+      "type": "file",
+      "file": "plan/P4 角色系統.md",
+      "x": 1900,
+      "y": -440,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "p9",
+      "type": "file",
+      "file": "plan/P9 存檔系統.md",
+      "x": 1900,
+      "y": -80,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "p5",
+      "type": "file",
+      "file": "plan/P5 對話系統.md",
+      "x": 2240,
+      "y": -440,
+      "width": 300,
+      "height": 320
+    },
+    {
+      "id": "n0",
+      "type": "file",
+      "file": "nodes/N0 世界生成中.md",
+      "x": -660,
+      "y": -640,
+      "width": 380,
+      "height": 160
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n1",
+      "fromSide": "right",
+      "toNode": "n2",
+      "toSide": "left",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "n3",
+      "toSide": "left",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n3",
+      "fromSide": "bottom",
+      "toNode": "n4",
+      "toSide": "top",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "e4",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "n5",
+      "toSide": "left",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "e5",
+      "fromNode": "n5",
+      "fromSide": "bottom",
+      "toNode": "n6",
+      "toSide": "top",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "e6",
+      "fromNode": "n6",
+      "fromSide": "right",
+      "toNode": "n7",
+      "toSide": "left",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "e7",
+      "fromNode": "n7",
+      "fromSide": "right",
+      "toNode": "n8",
+      "toSide": "left",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "e8",
+      "fromNode": "n8",
+      "fromSide": "right",
+      "toNode": "n9",
+      "toSide": "left",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "e10",
+      "fromNode": "n9",
+      "fromSide": "bottom",
+      "toNode": "n10",
+      "toSide": "top",
+      "color": "#7a7a7a",
+      "label": "Submit"
+    },
+    {
+      "id": "e11",
+      "fromNode": "n10",
+      "fromSide": "right",
+      "toNode": "n11",
+      "toSide": "left",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "e12",
+      "fromNode": "n11",
+      "fromSide": "right",
+      "toNode": "n12",
+      "toSide": "left",
+      "color": "#7a7a7a"
+    },
+    {
+      "id": "m1",
+      "fromNode": "p1",
+      "fromSide": "top",
+      "toNode": "n1",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m2",
+      "fromNode": "p1",
+      "fromSide": "top",
+      "toNode": "n2",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m3",
+      "fromNode": "p1",
+      "fromSide": "top",
+      "toNode": "n3",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m4",
+      "fromNode": "p2",
+      "fromSide": "top",
+      "toNode": "n4",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m5",
+      "fromNode": "p2",
+      "fromSide": "top",
+      "toNode": "n5",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m6",
+      "fromNode": "p2",
+      "fromSide": "top",
+      "toNode": "n6",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m7",
+      "fromNode": "p2",
+      "fromSide": "top",
+      "toNode": "n7",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m8",
+      "fromNode": "p2",
+      "fromSide": "top",
+      "toNode": "n8",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m9",
+      "fromNode": "p2",
+      "fromSide": "top",
+      "toNode": "n9",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m10",
+      "fromNode": "p3",
+      "fromSide": "top",
+      "toNode": "n10",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m11",
+      "fromNode": "p3",
+      "fromSide": "top",
+      "toNode": "n11",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m12",
+      "fromNode": "p3",
+      "fromSide": "top",
+      "toNode": "n12",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m13",
+      "fromNode": "p4",
+      "fromSide": "top",
+      "toNode": "n3",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m14",
+      "fromNode": "p4",
+      "fromSide": "top",
+      "toNode": "n4",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m15",
+      "fromNode": "p5",
+      "fromSide": "top",
+      "toNode": "n2",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m16",
+      "fromNode": "p5",
+      "fromSide": "top",
+      "toNode": "n10",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m17",
+      "fromNode": "p6",
+      "fromSide": "top",
+      "toNode": "n4",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m18",
+      "fromNode": "p7",
+      "fromSide": "top",
+      "toNode": "n6",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m19",
+      "fromNode": "p7",
+      "fromSide": "top",
+      "toNode": "n9",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "m20",
+      "fromNode": "p7",
+      "fromSide": "top",
+      "toNode": "n12",
+      "toSide": "bottom",
+      "toEnd": "none",
+      "color": "#ffea9e"
+    },
+    {
+      "id": "e0",
+      "fromNode": "n0",
+      "fromSide": "right",
+      "toNode": "n1",
+      "toSide": "left",
+      "toEnd": "arrow"
+    }
+  ]
+}

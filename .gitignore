@@ -52,6 +52,15 @@
 !TSB_Studio_Project/CIS428_Assignment2/AGENTS.md
 
 # ----------------------------------------------------------------
+# 3) Design notes and decision log (an Obsidian vault)
+# ----------------------------------------------------------------
+!Obsidian/cis428 assignment2/**
+# Obsidian's own workspace state is machine-specific churn.
+Obsidian/**/.obsidian/workspace*.json
+Obsidian/**/.obsidian/cache
+Obsidian/**/.trash/
+
+# ----------------------------------------------------------------
 # Not tracked on purpose (re-ignored after the whitelist above)
 # ----------------------------------------------------------------
 # Transpiled JS and sourcemaps are build output, not the submission.
