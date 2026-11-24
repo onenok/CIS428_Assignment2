@@ -1,0 +1,20 @@
+{
+  "extends": "./.genesys/sdk/tsconfig.json",
+  "compilerOptions": {
+    // Add your custom TypeScript compiler options here
+    // These will override or extend the SDK base configuration
+  },
+  // 'include' and 'exclude' completely replace the base config (not merged).
+  // Paths are resolved relative to THIS file (project root), so they differ
+  // from the base config which lives in .genesys/sdk/.
+  //
+  // Tests live in tests/ (not src/) so the editor-generated src/auto-imports.ts
+  // never pulls them into the shipped game bundle.
+  "include": [
+    "src/**/*",
+    "tests/**/*",
+    "scripts/**/*",
+    "vite.config.ts",
+    "packs/*/src/**/*"
+  ]
+}

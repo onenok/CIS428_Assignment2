@@ -1,0 +1,60 @@
+# ================================================================
+# Whitelist-style ignore: ignore everything, then re-include only
+# the two things this repo exists to deliver:
+#   1) the submission deliverables (report / slides / gameplay video)
+#   2) the game itself (a The Sandbox Studio project: source + assets)
+# ================================================================
+
+# Ignore everything...
+*
+
+# ...but let Git descend into directories so the "!" rules can match.
+!*/
+
+# ----------------------------------------------------------------
+# Repo plumbing
+# Anchored to the repo root on purpose: an unanchored "!README.md"
+# would also match every README.md anywhere in the working folder.
+# ----------------------------------------------------------------
+!/.gitignore
+!/README.md
+
+# ----------------------------------------------------------------
+# 1) Submission deliverables
+# ----------------------------------------------------------------
+!deliverables/The Loomkeeper - Report.docx
+!deliverables/The Loomkeeper - Slides.pptx
+!deliverables/Loomkeeper - Gameplay (timelapse).mp4
+!deliverables/Loomkeeper - Gameplay (timelapse, compressed).mp4
+
+# ----------------------------------------------------------------
+# 2) The game (a The Sandbox Studio project)
+# ----------------------------------------------------------------
+!TSB_Studio_Project/CIS428_Assignment2/src/**
+!TSB_Studio_Project/CIS428_Assignment2/assets/**
+!TSB_Studio_Project/CIS428_Assignment2/scripts/**
+!TSB_Studio_Project/CIS428_Assignment2/tests/**
+!TSB_Studio_Project/CIS428_Assignment2/.genesys/**
+
+# Project config
+!TSB_Studio_Project/CIS428_Assignment2/index.html
+!TSB_Studio_Project/CIS428_Assignment2/package.json
+!TSB_Studio_Project/CIS428_Assignment2/pnpm-lock.yaml
+!TSB_Studio_Project/CIS428_Assignment2/pnpm-workspace.yaml
+!TSB_Studio_Project/CIS428_Assignment2/tsconfig.json
+!TSB_Studio_Project/CIS428_Assignment2/turbo.json
+!TSB_Studio_Project/CIS428_Assignment2/vite.config.ts
+!TSB_Studio_Project/CIS428_Assignment2/eslint.config.js
+!TSB_Studio_Project/CIS428_Assignment2/CIS428_Assignment2.genesys-project
+!TSB_Studio_Project/CIS428_Assignment2/CIS428_Assignment2.code-workspace
+!TSB_Studio_Project/CIS428_Assignment2/.gitattributes
+!TSB_Studio_Project/CIS428_Assignment2/.gitignore
+!TSB_Studio_Project/CIS428_Assignment2/AGENTS.md
+
+# ----------------------------------------------------------------
+# Not tracked on purpose (re-ignored after the whitelist above)
+# ----------------------------------------------------------------
+# Transpiled JS and sourcemaps are build output, not the submission.
+TSB_Studio_Project/CIS428_Assignment2/**/*.map
+# Editor-generated backup of the scene
+TSB_Studio_Project/CIS428_Assignment2/assets/*.bak

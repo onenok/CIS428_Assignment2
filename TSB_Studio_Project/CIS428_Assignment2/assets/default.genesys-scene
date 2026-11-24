@@ -1,0 +1,306 @@
+{
+  "$objects": [
+    {
+      "$bc": "THREE.DirectionalLight",
+      "$id": 1,
+      "$value": {
+        "_": [
+          {
+            "$bc": "c",
+            "_": [
+              1,
+              0.930111,
+              0.83077
+            ]
+          },
+          10
+        ]
+      }
+    },
+    {
+      "$bc": "THREE.HemisphereLight",
+      "$id": 2,
+      "$value": {
+        "_": [
+          {
+            "$bc": "c",
+            "_": [
+              0.62,
+              0.74,
+              1
+            ]
+          },
+          {
+            "$bc": "c",
+            "_": [
+              0.55,
+              0.62,
+              0.45
+            ]
+          },
+          1.6
+        ]
+      }
+    }
+  ],
+  "$root": {
+    "$bc": "ENGINE.World",
+    "children": [
+      {
+        "$bc": "ENGINE.DirectionalLightNode",
+        "$initOptions": {
+          "castShadow": true,
+          "color": {
+            "$bc": "c",
+            "_": [
+              1,
+              0.930111,
+              0.83077
+            ]
+          },
+          "drivesSky": true,
+          "intensity": 10,
+          "isRoot": true,
+          "shadowBias": -0.001,
+          "shadowCameraBottom": -200,
+          "shadowCameraLeft": -200,
+          "shadowCameraRight": 200,
+          "shadowCameraTop": 200,
+          "shadowFar": 250,
+          "shadowMapSize": 2048,
+          "shadowNear": 0.1,
+          "shadowNormalBias": 0,
+          "shadowRadius": 3,
+          "useCsmShadows": false
+        },
+        "castShadow": true,
+        "children": [
+          {
+            "$ref": 1
+          }
+        ],
+        "drivesSky": true,
+        "light": {
+          "$ref": 1
+        },
+        "name": "Directional Light",
+        "nodeId": 20945,
+        "position": {
+          "$bc": "v3",
+          "_": [
+            10,
+            50,
+            -10
+          ]
+        },
+        "rotation": {
+          "$bc": "e",
+          "_": [
+            1.919862,
+            0,
+            0
+          ]
+        },
+        "shadowBias": -0.001,
+        "shadowCameraBottom": -200,
+        "shadowCameraLeft": -200,
+        "shadowCameraRight": 200,
+        "shadowCameraTop": 200,
+        "shadowFar": 250,
+        "userData": {
+          "objectFlags": 6
+        },
+        "uuid": "7223c73249cb5131"
+      },
+      {
+        "$bc": "ENGINE.PlayerStart",
+        "$initOptions": {},
+        "children": {
+          "$length": 2
+        },
+        "name": "Player Start",
+        "nodeId": 12230,
+        "position": {
+          "$bc": "v3",
+          "_": [
+            -10,
+            11,
+            -10
+          ]
+        },
+        "rotation": {
+          "$bc": "e",
+          "_": [
+            0,
+            3.141593,
+            0
+          ]
+        },
+        "snapToGround": true,
+        "userData": {
+          "objectFlags": 6
+        },
+        "uuid": "223c73249cb51314"
+      },
+      {
+        "$bc": "ENGINE.SkyNode",
+        "$initOptions": {
+          "cloudDensity": 0.7,
+          "cloudElevation": 0.42,
+          "cloudSpeed": 0.00005,
+          "environmentMapIntensity": 1,
+          "generateEnvironmentMap": true,
+          "isRoot": true,
+          "mieDirectionalG": 0.85
+        },
+        "children": {
+          "$length": 1
+        },
+        "cloudDensity": 0.7,
+        "cloudElevation": 0.42,
+        "cloudSpeed": 0.00005,
+        "generateEnvironmentMap": true,
+        "mieDirectionalG": 0.85,
+        "name": "Sky",
+        "nodeId": 6353,
+        "position": {
+          "$bc": "v3",
+          "_": [
+            9,
+            0,
+            -12.5
+          ]
+        },
+        "skyMeshScale": 10000,
+        "userData": {
+          "objectFlags": 6
+        },
+        "uuid": "3c73249cb5131461"
+      },
+      {
+        "$bc": "ENGINE.MeshNode",
+        "children": {
+          "$length": 1
+        },
+        "geometry": {
+          "$bc": "THREE.PlaneGeometry",
+          "_": [
+            20,
+            20,
+            1,
+            1
+          ]
+        },
+        "name": "Ground Plane",
+        "nodeId": 25218,
+        "rotation": {
+          "$bc": "e",
+          "_": [
+            -1.570796,
+            0,
+            0
+          ]
+        },
+        "userData": {
+          "objectFlags": 4
+        },
+        "uuid": "1cf594e4-b427-462b-9232-f6af06de49aa"
+      },
+      {
+        "$bc": "ENGINE.SceneNode",
+        "name": "LoomkeeperSpawn",
+        "nodeId": 9830,
+        "position": {
+          "$bc": "v3",
+          "_": [
+            -10,
+            13,
+            -14
+          ]
+        },
+        "userData": {
+          "objectFlags": 4
+        },
+        "uuid": "3c1cbab8dc75f630"
+      },
+      {
+        "$bc": "ENGINE.HemisphereLightNode",
+        "children": [
+          {
+            "$ref": 2
+          }
+        ],
+        "light": {
+          "$ref": 2
+        },
+        "name": "Sky Fill Light",
+        "nodeId": 50727,
+        "position": {
+          "$bc": "v3",
+          "_": [
+            0,
+            40,
+            0
+          ]
+        },
+        "userData": {
+          "objectFlags": 4
+        },
+        "uuid": "f88679bf2689cdc8"
+      }
+    ],
+    "editorData": {
+      "sceneTree": {
+        "children": [
+          {
+            "id": "7223c73249cb5131",
+            "isExpanded": false,
+            "nodeType": "actor"
+          },
+          {
+            "id": "223c73249cb51314",
+            "isExpanded": false,
+            "nodeType": "actor"
+          },
+          {
+            "id": "3c73249cb5131461",
+            "isExpanded": false,
+            "nodeType": "actor"
+          },
+          {
+            "id": "1cf594e4-b427-462b-9232-f6af06de49aa",
+            "isExpanded": false,
+            "nodeType": "actor"
+          },
+          {
+            "id": "3c1cbab8dc75f630",
+            "isExpanded": false,
+            "nodeType": "actor"
+          },
+          {
+            "id": "f88679bf2689cdc8",
+            "isExpanded": false,
+            "nodeType": "actor"
+          }
+        ],
+        "id": "c73249cb51314610",
+        "nodeType": "scene"
+      }
+    },
+    "gameModeClass": null,
+    "postProcessConfiguration": {
+      "effects": [
+        {
+          "enabled": true,
+          "exposure": 0.5,
+          "mode": 4,
+          "type": "toneMapping"
+        }
+      ]
+    },
+    "resources": null,
+    "settings": {},
+    "uuid": "c73249cb51314610"
+  },
+  "$version": 3
+}

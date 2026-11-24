@@ -1,0 +1,39 @@
+{
+  "defaultScene": "./assets/default.genesys-scene",
+  "engineVersion": "20.0.1",
+  "alwaysCopyAssets": [
+    "@project/assets/models/Loomkeeper.glb",
+    "@project/assets/models/steve-minecraft.glb"
+  ],
+  "assetCompiler": {
+    "enabled": false,
+    "compileOnPlay": false,
+    "textureCompression": {
+      "enabled": true,
+      "quality": "medium",
+      "maxSize": 2048,
+      "formats": {
+        "png": true,
+        "jpeg": true,
+        "webp": false
+      },
+      "exclude": []
+    },
+    "meshCompression": {
+      "enabled": true,
+      "level": "medium"
+    },
+    "audioCompression": {
+      "enabled": true,
+      "quality": "medium",
+      "formats": {
+        "wav": true,
+        "flac": true,
+        "aiff": true,
+        "ogg": true,
+        "aac": true,
+        "m4a": true
+      }
+    }
+  }
+}

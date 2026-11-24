@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesys Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        #game-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    <script>
+        (function () {
+            var ua = navigator.userAgent || '';
+            var uaMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(ua);
+            var iPadOs = /Macintosh/i.test(ua) && navigator.maxTouchPoints > 1;
+            var clientHintMobile = navigator.userAgentData && navigator.userAgentData.mobile;
+            if (!uaMobile && !iPadOs && !clientHintMobile) return;
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/eruda';
+            script.onload = function () {
+                if (typeof eruda !== 'undefined') eruda.init();
+            };
+            document.body.appendChild(script);
+        })();
+    </script>
+    <script type="module">
+        import { launchGame } from './scripts/genesys/dev/launcher.js';
+        launchGame();
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "outputs": [
+        "dist/**",
+        ".editor/build-stamp.json",
+        ".intermediate/tsconfig.tsbuildinfo",
+        ".intermediate/property-metadata-cache.json"
+      ],
+      "inputs": [
+        "src/**",
+        "packs/**",
+        "scripts/**",
+        "tsconfig*.json",
+        "vite.config.*",
+        "package.json",
+        ".genesys/sdk/**"
+      ]
+    }
+  }
+}
